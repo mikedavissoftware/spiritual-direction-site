@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   has_one_attached :image
-  has_rich_text :body
+  # has_rich_text :body
 
   # The following validations are enabled by the activestorage-validator gem
   validates :image, blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'], size_range: 0..(5.megabytes) }

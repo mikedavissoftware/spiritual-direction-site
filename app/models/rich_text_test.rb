@@ -1,2 +1,0 @@
-class RichTextTest < ApplicationRecord
-end

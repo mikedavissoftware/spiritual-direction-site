@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :rich_text_tests
   resources :posts
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

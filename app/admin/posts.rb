@@ -3,20 +3,36 @@ ActiveAdmin.register Post do
     selectable_column
     column :id
     column :title
-    column :body
-    column :image
+    column :body do |post|
+      raw(post.body)
+    end
+    column :placeholder_image
+    column :image do |post|
+      if post.image.attached?
+        span do
+          link_to post.image, target: :_blank do 
+            image_tag(post.image.variant(resize: "100^x100^"))
+          end
+        end
+      else
+        span do
+          "N/A"
+        end
+      end
+    end
     column :published_at
     column :created_at
     column :updated_at
     actions
   end
 
-  permit_params :title, :body, :image, :published_at
+  permit_params :title, :body, :placeholder_image, :image, :published_at
 
   form do |f|
     f.inputs 'Post' do
       f.input :title
       f.input :body, as: :quill_editor
+      f.input :placeholder_image
       f.input :image, as: :file, input_html: { multiple: false }, label: 'Add an image to the blog post'
       f.input :published_at
     end
@@ -26,15 +42,25 @@ ActiveAdmin.register Post do
   show do |t|
     attributes_table do
       if t.image.attached?
-        puts "ayyyyyyy"
         span do
           # for some reason this image tag successfully opened in a new tab when putting it in a block with the 'do' and 'end', instead of one line
           link_to t.image, target: :_blank do 
             image_tag(t.image.variant(resize: "324^x324^"))
           end
         end
+      else
+        span do
+          # for some reason this image tag successfully opened in a new tab when putting it in a block with the 'do' and 'end', instead of one line
+          link_to t.placeholder_image, target: :_blank do 
+            image_tag(t.placeholder_image)
+          end
+        end
       end
       row :title
+      row :body do
+        raw(t.body)
+      end
+      row :placeholder_image
       row :created_at
       row :updated_at
       row :published_at
