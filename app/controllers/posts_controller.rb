@@ -7,3 +7,6 @@ class PostsController < InheritedResources::Base
     end
 
 end
+
+# note that this controller inherits from InheritedResources::Base
+# this might mean that other controllers do as well
