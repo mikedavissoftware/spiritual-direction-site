@@ -11,7 +11,8 @@ ActiveAdmin.register Post do
       if post.image.attached?
         span do
           link_to post.image, target: :_blank do 
-            image_tag(post.image.variant(resize: "100^x100^"))
+            # image_tag(post.image.variant(resize: "100^x100^"))
+            url_for(post.image)
           end
         end
       else
