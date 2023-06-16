@@ -110,6 +110,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    email_validator (2.2.4)
+      activemodel
     erubi (1.12.0)
     faker (2.23.0)
       i18n (>= 1.8.11, < 2)
@@ -194,6 +196,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.7)
+    rack-cors (2.0.1)
+      rack (>= 2.0.0)
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.5)
@@ -301,6 +305,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  email_validator
   faker
   image_processing (~> 1.2)
   importmap-rails
@@ -308,6 +313,7 @@ DEPENDENCIES
   mail_form
   pg (~> 1.1)
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.4, >= 7.0.4.3)
   sassc-rails (~> 2.1.0)
   selenium-webdriver

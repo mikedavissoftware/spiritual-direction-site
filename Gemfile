@@ -76,6 +76,7 @@ end
 
 ### New gems
 gem "mail_form"
+gem 'email_validator'
 
 gem 'activeadmin', '~> 2.13', '>= 2.13.1'
 
@@ -84,3 +85,5 @@ gem 'devise'
 gem 'activeadmin_quill_editor'
 
 gem 'faker'
+
+gem 'rack-cors'
