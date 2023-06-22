@@ -2,6 +2,9 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
   allow do
     origins 'https://dashing-valkyrie-f4d1b0.netlify.app'
+    resource '/contact_forms',
+      headers: :any, 
+      methods: [:post]
     resource '*', 
       headers: :any, 
       methods: [:get]
