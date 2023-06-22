@@ -1,5 +1,4 @@
 class PostsController < InheritedResources::Base
-  skip_before_action :authenticate_request, only: [:index, :show]
 
   private
 
