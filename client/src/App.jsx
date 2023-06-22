@@ -15,7 +15,7 @@ export const GlobalContext = createContext()
 
 export default function App() {
 
-  const api = import.meta.env.PROD ? "https://daggett-control-website.onrender.com" : "/api"
+  const api = import.meta.env.PROD ? "https://spiritual-direction-site-backend.onrender.com/admin" : "/api"
 
   console.log(api)
 
