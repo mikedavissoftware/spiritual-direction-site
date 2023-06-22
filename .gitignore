@@ -36,4 +36,4 @@
 /config/app_environment_variables.rb
 
 # Ignore package lock for render deploy
-/client/package-lock.json
+# /client/package-lock.json
