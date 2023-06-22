@@ -1,4 +1,10 @@
 ActiveAdmin.register Post do
+  permit_params :title, :body, :placeholder_image, :image, :published_at
+  
+  controller do
+    skip_before_action :authenticate_active_admin_user, only: [:index, :show]
+  end
+
   index do
     selectable_column
     column :id
@@ -26,8 +32,6 @@ ActiveAdmin.register Post do
     column :updated_at
     actions
   end
-
-  permit_params :title, :body, :placeholder_image, :image, :published_at
 
   form do |f|
     f.inputs 'Post' do
