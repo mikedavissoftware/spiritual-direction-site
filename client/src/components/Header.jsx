@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 
+import ProfilePicture from "../assets/images/prof-pic-1-cropped.jpg"
 
 export default function Header() {
 
@@ -7,8 +8,13 @@ export default function Header() {
 
   return (
     <div className="navbar bg-black">
+      <div className="avatar">
+        <div className="w-20 rounded-full">
+          <img src={ProfilePicture} />
+        </div>
+      </div>
       <div className="flex-1">
-        <NavLink exact to="/" className="btn btn-ghost normal-case text-xl">Mike Davis - Spiritual Director</NavLink>
+        <NavLink exact to="/" className="btn btn-ghost normal-case text-xl">Mike Davis, Spiritual Director</NavLink>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
