@@ -26,24 +26,24 @@ export default function App() {
       <Header />
       
       <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route path="/about">
-            <AboutPage />
-          </Route>
-          <Route path="/blog">
-            <BlogPage />
-          </Route>
-          <Route path="/events">
-            <EventsPage />
-          </Route>
-          <Route path="/booking">
-            <BookingPage />
-          </Route>
-          <Route path="/faq">
-            <FAQPage />
-          </Route>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/about">
+          <AboutPage />
+        </Route>
+        <Route path="/blog">
+          <BlogPage />
+        </Route>
+        <Route path="/events">
+          <EventsPage />
+        </Route>
+        <Route path="/booking">
+          <BookingPage />
+        </Route>
+        <Route path="/faq">
+          <FAQPage />
+        </Route>
       </Switch>
 
       <Footer />
