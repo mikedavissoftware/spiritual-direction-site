@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react"
-import { useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 import { GlobalContext } from "../App"
 
@@ -8,7 +8,7 @@ export default function BookingPage() {
 
   const { api } = useContext(GlobalContext)
 
-  const history = useHistory()
+  const history = useNavigate()
   const redirect = () => {
     history.push("/")
   }

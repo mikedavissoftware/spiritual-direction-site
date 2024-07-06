@@ -7,7 +7,7 @@ export default function BlogPage() {
 
   return (
     <div>
-      <div className="hero bg-white text-primary">
+      <div className="hero min-h-screen bg-white text-primary">
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">Blog Page</h1>
